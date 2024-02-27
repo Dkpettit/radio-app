@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dave Pettit Portfolio</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar-primary mb-4 text-white justify-between">
+        <div class="container">
+            <h1 class="site-title" id="top">Rick Bennett's Radio App</h1>
+            <ul class="display-f">
+                <li class="ml-1 text-hover-secondary"><a href="#members">View Members</a></li>
+                <li class="ml-1 text-hover-secondary"><a href="#addMember">Add a Member</a></li>
+                <li class="ml-1 text-hover-secondary"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- intro -->
+    <div class="container mt-5">
+        <div class="row justify-center">
+            <div class="col-12-xs col-5-md">
+                <h2>
+                    <div class="font-xxl">Welcome</div>
+                    <div class="font-xxl text-secondary">North Shore Amateur Radio Club</div>
+                </h2>
+                <p class="text-gray mt-2 mb-3">This site is maintained for the purpose of tracking member activity.</p>
+                <a href="#members" class="btn-outlined-secondary text-secondary text-hover-white">View Member Table</a>
+            </div>
+            <div class="col-12-xs col-5-md">
+                <img src="./img/girl.jpg" alt="Girl holding raio antenna" width="500" height="500">
+            </div>
+        </div>
+    </div>
+
+    <!-- about -->
+    <section class="bg-secondary-light-9 mt-5 pt-4 pb-4" id="members">
+         <!-- Table -->
+    <h2 class="mb-2">Members</h2>
+    <section class="mt-5 p-3">
+        <div class="container">
+            <table class="table-secondary">
+                <tbody id="myTable">
+                    <thead>
+                        <th>Call Sign</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Country</th>
+                        <th>Date</th>
+                    </thead>
+                </tbody>
+            </table>
+        </div>
+        
+<a href="#top">Back to the top</a>
+    </section>      
+</div>
+    </section>
+    
+    <!-- Add Member -->
+    <section class="mt-5 bg-primary-light-9 p-3" id="addMember">
+        <div class="container">
+            <form id="memberForm" return false;" class="form-primary">
+                <h2 class="mb-2 mt-3">Add a Member to table</h2>                
+                <input type="text" name="callsign" id="callsign" placeholder="Call Sign" required>
+                <input type="text" name="name" id="name" placeholder="Member Name">
+                <input type="text" name="address" id="address" placeholder="Member Address">
+                <input type="text" name="country" id="country" placeholder="Member Country">
+                <input type="text" name="date" id="date" placeholder="Enter the Date (Leave blank for today's date)">
+                <div class="row justify-center mt-2">
+                    <button class="btn-outlined-purple text-purple text-hover-white font-md" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        <a href="#top">Back to the top</a>
+    </section>    
+    
+    <!-- Contact -->
+    <section class="mt-5 bg-secondary-light-9 p-3" id="contact">
+        <div class="container">
+            <form onsubmit="sendEmail(); reset(); return false;" class="form-secondary">
+                <h2 class="mb-2 mt-3">Get In Touch</h2>
+                <h6 class="m-1">Submitting this Form will launch your email application, please review and send the message.</h6>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="text" id="phone" placeholder="Your Phone no." required>
+                <textarea id="message" rows="4" placeholder="How can I help you?"></textarea>
+                <div class="row justify-center mt-2">
+                    <button class="btn-outlined-secondary text-secondary-light font-md" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        
+<a href="#top">Back to the top</a>
+    </section>
+    
+    <div class="myMessage" id="messageDiv"></div>
+
+    <!-- footer -->
+    <footer class="bg-gray-light-7 pt-3 pb-3 mt-5">
+        <div class="container">
+            copyright 2024 David Pettit
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="module" src="./js/index.js"></script>
+</body>
+</html>
